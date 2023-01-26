@@ -1,12 +1,12 @@
-import { Box, Container, Heading, Link, Text, VStack } from "@chakra-ui/layout";
-import { Button, Image, Stack } from "@chakra-ui/react";
-import React, { useContext } from "react";
+import { Box, Container, Heading, Text } from "@chakra-ui/layout";
+import { Stack } from "@chakra-ui/react";
+import React from "react";
 
 const Main = () => {
   return (
     <Box as="main" w="full" mt={{ base: "-40", md: "-20" }}>
       <Container
-        h={{ base: "5xl", md: "4xl" }}
+        h={{ base: "4xl", md: "100vh" }}
         maxW="container.xl"
         display="flex"
         justifyContent="center"
