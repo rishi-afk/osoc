@@ -137,8 +137,9 @@ const Main = () => {
                 w="96"
                 _hover={{
                   filter: "grayscale(0%)",
-                  transition: "0.25s ease-out",
+                  transition: "filter 0.25s ease-in-out",
                 }}
+                transition="filter 0.25s ease-in-out"
               />
             </Box>
           </Stack>

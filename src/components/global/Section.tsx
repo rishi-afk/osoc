@@ -10,12 +10,20 @@ import {
 import React from "react";
 
 interface Props {
+  callback: any;
   heading: string;
-  batches?: { batch: string; id: string }[];
+  years?: string[];
+  defaultYear?: string;
   children?: React.ReactNode;
 }
 
-const Section = ({ heading, children, batches }: Props) => {
+const Section = ({
+  heading,
+  children,
+  years,
+  defaultYear,
+  callback,
+}: Props) => {
   return (
     <Box w="full" py="16" as="section">
       <Container maxW="container.xl" color="brand.lightest" px="4">
@@ -36,13 +44,20 @@ const Section = ({ heading, children, batches }: Props) => {
             >
               {heading}
             </Text>
-            {batches && (
-              <Select defaultValue="2025" w="40">
-                {batches.map((batch) => (
-                  <option value={batch.id}>Batch {batch.batch}</option>
-                ))}
-              </Select>
-            )}
+            <Select
+              w="40"
+              defaultValue={defaultYear}
+              onChange={(event) => {
+                const value = event.target.value;
+                callback(() => value);
+              }}
+            >
+              {years.map((year) => (
+                <option key={year} value={year}>
+                  Batch {year}
+                </option>
+              ))}
+            </Select>
           </HStack>
           <>{children}</>
         </VStack>

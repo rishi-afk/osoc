@@ -1,28 +1,29 @@
 import { Grid, GridProps } from "@chakra-ui/react";
 import React, { useEffect } from "react";
 
-import { motion, useAnimation } from "framer-motion";
+import { AnimationControls, motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import MemberCard from "./MemberCard";
 const MotionGrid = motion<GridProps>(Grid);
 
 interface Props {
-  children: React.ReactNode;
+  members?: any[];
 }
 
-const MemberGrid = ({ children }: Props) => {
-  const { ref, inView } = useInView();
+const MemberGrid = ({ members }: Props) => {
   const animation = useAnimation();
-
+  const { ref, inView } = useInView();
   useEffect(() => {
     if (inView) {
       animation.start("show");
     }
-  }, [inView]);
+  }, [inView, members]);
 
   return (
     <MotionGrid
       ref={ref}
       w={{ base: "full", sm: "initial", md: "full" }}
+      minH="2xl"
       templateColumns={{ md: "repeat(2, 1fr)", lg: "repeat(3, 1fr)" }}
       gap={"px"}
       mt="6"
@@ -36,7 +37,9 @@ const MemberGrid = ({ children }: Props) => {
       initial="hidden"
       animate={animation}
     >
-      {children}
+      {members.map((member) => (
+        <MemberCard member={member} key={member.id} />
+      ))}
     </MotionGrid>
   );
 };

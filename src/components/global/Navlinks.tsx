@@ -21,7 +21,7 @@ const Navlinks = (props: Props) => {
     >
       <Link
         as={NextLink}
-        href="events"
+        href="/events"
         position="relative"
         _after={{
           content: "''",
@@ -44,7 +44,7 @@ const Navlinks = (props: Props) => {
       </Link>
       <Link
         as={NextLink}
-        href="team"
+        href="/team"
         position="relative"
         _after={{
           content: "''",
@@ -67,7 +67,7 @@ const Navlinks = (props: Props) => {
       </Link>
       <Link
         as={NextLink}
-        href="about"
+        href="/about"
         position="relative"
         _after={{
           content: "''",
@@ -90,7 +90,7 @@ const Navlinks = (props: Props) => {
       </Link>
       <Link
         as={NextLink}
-        href="contact"
+        href="/contact"
         position="relative"
         _after={{
           content: "''",

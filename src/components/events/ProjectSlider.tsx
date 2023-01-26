@@ -87,7 +87,7 @@ const ProjectSlider = ({ slides }: Props) => {
             </VStack>
             <Box boxSize={{ base: "230px", md: "sm", lg: "md" }} pos="relative">
               <AspectRatio w="full" h="full" mt="6">
-                <Box w="full" h="full" bg="blue.200" />
+                <Box w="full" h="full" bgImage="https://picsum.photos/800" />
               </AspectRatio>
             </Box>
           </Stack>

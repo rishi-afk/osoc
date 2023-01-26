@@ -12,6 +12,22 @@ const Index = () => {
     <>
       <Head>
         <title>OSOC - Open Source Open Community</title>
+        <meta
+          name="description"
+          content="We are an open source community initiated by MCA students of NIT Trichy. We learn, work and share the joys of Open source technologies and wish to contribute to the Open Source Society. "
+        ></meta>
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="OSOC | Open Source Open Community" />
+        <meta
+          property="og:description"
+          content="We are an open source community initiated by MCA students of NIT Trichy. We learn, work and share the joys of Open source technologies and wish to contribute to the Open Source Society. "
+        />
+        <meta property="og:image" content="/og.jpg" />
+        <meta
+          property="og:site_name"
+          content="OSOC | Open Source Open Community"
+        />
+        <link rel="canonical" href={`${process.env.NEXT_PUBLIC_OG_HOST}/`} />
       </Head>
       <Flex minW="full" flexDir="column" pos="relative" zIndex={10}>
         <video

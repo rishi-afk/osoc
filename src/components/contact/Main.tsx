@@ -64,6 +64,7 @@ const Main = () => {
               _hover={{ color: "brand.400", bg: "brand.lightest" }}
               size="md"
               variant="outline"
+              href="mailto:osoc@gmail.com?subject=Saying Hi!"
             >
               Connect
             </Button>

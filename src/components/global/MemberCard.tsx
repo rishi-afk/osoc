@@ -29,7 +29,13 @@ const MemberCard = ({ member }: Props) => {
         show: { opacity: 1, transition: { duration: 0.8 } },
       }}
     >
-      <Image h="full" w="full" src={member.image} objectFit="cover" />
+      <Image
+        h="full"
+        w="full"
+        src={member.image}
+        objectFit="cover"
+        opacity={0.9}
+      />
       <Link as={NextLink} href={member.redirect}>
         <MotionFlex
           w="full"

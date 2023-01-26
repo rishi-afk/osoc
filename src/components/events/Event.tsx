@@ -61,7 +61,7 @@ const Event = ({
         <Box
           w={{ base: "full", md: "md" }}
           h="md"
-          bg="red.100"
+          bgImage="https://picsum.photos/800"
           flexShrink={0}
         />
       )}

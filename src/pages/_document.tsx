@@ -6,12 +6,12 @@ export default class Document extends NextDocument {
     return (
       <Html lang="en">
         <Head>
-          {/* <link
+          <link
             rel="shortcut icon"
             href="/favicon.ico"
             type="image/x-icon"
             key="favicon"
-          /> */}
+          />
         </Head>
         <body>
           <ColorModeScript initialColorMode="dark" />

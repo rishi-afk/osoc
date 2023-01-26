@@ -16,7 +16,6 @@ const about = () => {
           autoPlay
           muted
           loop
-          src="/bg.mp4"
           style={{
             objectFit: "cover",
             position: "fixed",
@@ -26,7 +25,10 @@ const about = () => {
             width: "100vw",
             zIndex: "-10",
           }}
-        />
+        >
+          <source src="bg.webm" type="video/webm" />
+          <source src="bg.mp4" type="video/mp4" />
+        </video>
         <Box
           bg="blackAlpha.700"
           pos="fixed"
