@@ -1,5 +1,12 @@
 import { BoxProps, FlexProps, Text } from "@chakra-ui/layout";
-import { Box, Flex, Image, Link, Icon } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  Image,
+  Link,
+  Icon,
+  useBreakpointValue,
+} from "@chakra-ui/react";
 import NextLink from "next/link";
 import React from "react";
 
@@ -18,6 +25,10 @@ interface Props {
 }
 
 const MemberCard = ({ member }: Props) => {
+  const variant = useBreakpointValue({
+    base: "mobile",
+    md: "desktop",
+  });
   return (
     <MotionBox
       w="full"
